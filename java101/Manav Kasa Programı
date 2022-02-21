@@ -1,0 +1,28 @@
+package Giris;
+
+import java.util.Scanner;
+
+public class ManavKasaProgramı08 {
+    public static void main(String[] args) {
+        double a = 2.14, e = 3.67, d = 1.11, m = 0.95, p = 5.00;
+        double akg, ekg, dkg, mkg, pkg;
+
+     
+        Scanner input = new Scanner(System.in);
+        System.out.print("Armut kac kilio? : ");
+        akg = input.nextDouble();
+        System.out.print("Elma kac kilio? : ");
+        ekg = input.nextDouble();
+        System.out.print("Domates kac kilio? : ");
+        dkg = input.nextDouble();
+        System.out.print("Muz kac kilio? : ");
+        mkg = input.nextDouble();
+        System.out.print("Patlican kac kilio? : ");
+        pkg = input.nextDouble();
+
+        double tutar = (akg * a) + (ekg * e) + (dkg * d) + (mkg * m) + (pkg * p);
+
+        System.out.println("Toplam Tutar : " + tutar + "TL");
+
+    }
+}
