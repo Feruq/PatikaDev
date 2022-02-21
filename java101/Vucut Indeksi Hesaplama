@@ -1,0 +1,22 @@
+package Giris;
+
+import java.util.Scanner;
+
+public class VucutIndeksiHesaplama07 {
+    public static void main(String[] args) {
+        double m, kg;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lutfen boyunuzu giriniz : ");
+        m = input.nextDouble();
+        System.out.print("Lutfen kilonuzu giriniz : ");
+        kg = input.nextDouble();
+
+        double indeksi = kg / (m * m);
+
+        System.out.println("Boyunuz : " + m);
+        System.out.println("Kilinuz : " + kg);
+        System.out.println("Vucut Kitle Indeksiniz : " + indeksi);
+
+    }
+}
