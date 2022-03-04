@@ -1,0 +1,66 @@
+package Giris;
+
+import java.util.Scanner;
+
+public class UcakBiletFiyatiHesaplama15 {
+    public static void main(String[] args) {
+        int km, yas, tip;
+
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Mesafe giriniz : ");
+        km = inp.nextInt();
+        System.out.print("Yaş giriniz : ");
+        yas = inp.nextInt();
+        System.out.print("Yolculuk tipi giriniz, Tek yön ise 1, Gidiş-Dönüş ise 2 tuşlayın : ");
+        tip = inp.nextInt();
+
+        if ( km > 0 && yas < 12 && tip == 1 ){
+            double normalTutar = km * 0.10;
+            double yasIndiri = normalTutar * 0.5;
+            double indirimliTutar = normalTutar - yasIndiri;
+
+            System.out.println("toplamTutar : " + indirimliTutar);
+        }
+        if ( km > 0 && yas < 12 && tip == 2 ){
+            double normalTutar = km * 0.10;
+            double yasIndiri = normalTutar * 0.5;
+            double indirimliTutar = normalTutar - yasIndiri;
+            double gidisdDonusIndiri = indirimliTutar * 0.2;
+            double toplamTutar = (indirimliTutar - gidisdDonusIndiri) * 2;
+            System.out.println( toplamTutar );
+        }
+        if ( km > 0 && yas >= 12 && yas <= 24 && tip == 1 ){
+            double normalTutar = km * 0.10;
+            double yasIndiri = normalTutar * 0.1;
+            double indirimliTutar = normalTutar - yasIndiri;
+
+            System.out.println("toplamTutar : " + indirimliTutar);
+        }
+        if ( km > 0 && yas >= 12 && yas <= 24 && tip == 2 ){
+            double normalTutar = km * 0.10;
+            double yasIndiri = normalTutar * 0.1;
+            double indirimliTutar = normalTutar - yasIndiri;
+            double gidisdDonusIndiri = indirimliTutar * 0.2;
+            double toplamTutar = (indirimliTutar - gidisdDonusIndiri) * 2;
+            System.out.println( toplamTutar );
+        }
+        if ( km > 0 && yas >= 65 && tip == 1 ){
+            double normalTutar = km * 0.10;
+            double yasIndiri = normalTutar * 0.3;
+            double indirimliTutar = normalTutar - yasIndiri;
+
+            System.out.println("toplamTutar : " + indirimliTutar);
+        }
+        if ( km > 0 && yas >= 65 && tip == 2 ){
+            double normalTutar = km * 0.10;
+            double yasIndiri = normalTutar * 0.3;
+            double indirimliTutar = normalTutar - yasIndiri;
+            double gidisdDonusIndiri = indirimliTutar * 0.2;
+            double toplamTutar = (indirimliTutar - gidisdDonusIndiri) * 2;
+            System.out.println( toplamTutar );
+        }
+        if ( km <= 0 || yas <= 0 || tip < 1 || tip > 2 ){
+            System.out.println("Hatalı Giriş!!!");
+        }
+    }
+}
