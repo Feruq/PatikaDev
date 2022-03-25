@@ -1,0 +1,23 @@
+package Giris;
+
+import java.util.Scanner;
+
+public class SayilarinOrtalamasi20 {
+    public static void main(String[] args) {
+        int g, sum=0, counter=0;
+        Scanner inp=new Scanner(System.in);
+        System.out.print("Sayı Giriniz : ");
+        g=inp.nextInt();
+        if(g>0) {
+            for (int i = 0; i <= g; i++) {
+                if (i % 12 == 0) {
+                    sum = sum + i;
+                    counter++;
+                }
+            }
+            System.out.println("Ortalama: "+ (sum/counter));
+        } else {
+            System.out.println("0 dan büyük tam sayı giriniz!!!");
+        }
+    }
+}
